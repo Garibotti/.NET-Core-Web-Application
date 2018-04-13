@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model PracticalTest.Models.Product
+
+<div style="height: 90vh" class="product">
+    <div class="leftProduct">
+        <img height="400px" width="280px" src=@Model.Image>
+    </div>
+    
+    <div class="rightProduct">
+      <ul id="items" >
+        <li class="item"> <a asp-action="Details" asp-route-id="1">Product 01</a> </li>
+        <li class="item"> <a asp-action="Details" asp-route-id="2">Product 02</a> </li>
+       </ul>    
+       <br>
+       <h4>@Model.Title</h4>
+       <h1>@Model.Headline</h1>
+       <p>@Model.Description</p>
+       <ul>
+            @foreach (var characteristic in Model.Characteristics)
+            {
+                <li>
+                    @characteristic
+                </li>
+            } 
+       </ul>
+        
+    </div>
+</div>

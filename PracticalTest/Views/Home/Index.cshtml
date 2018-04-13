@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div style="height: 160vh">
+    <div class="top">
+        <label id="textOne">@ViewData["TextOne"]</label>
+        <label id="textTwo">@ViewData["TextTwo"]</label>
+    </div>
+
+    <div class="list">
+        @model IEnumerable<PracticalTest.Models.Item>
+        <ul id="items" >
+            @foreach (var item in Model)
+            {
+                <li class="item">
+                    <img src=@item.Icon height="20px" width="20px">
+                    <h4>@item.Title </h4>
+                    <p>@item.Text</p>
+                </li>
+            } 
+        </ul>
+    </div>
+
+    <div class="message">
+        <div class="message-content">
+            <h4>What is Lorem Ipsum?</h4>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+    </div>
+   
+</div>

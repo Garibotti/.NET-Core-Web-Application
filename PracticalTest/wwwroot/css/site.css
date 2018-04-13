@@ -1,0 +1,132 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 1px;
+    padding-right: 1px;
+    width: 100%;
+}
+
+.top {
+    width: 100%;
+    height: 45%;
+    background-image: url(/images/background.jpg);
+    background-size: cover;
+    overflow-y: hidden;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#textOne {
+    width: 300px;
+    font-size: 35px;
+    padding-top: 10%;
+}
+
+#textTwo {
+    display: block;
+    font-size: 20px;
+}
+
+.list {
+    width: 100%;
+    height: 35%;
+    background-color: silver;
+    overflow: hidden;
+}
+
+
+#items {
+    list-style: none;
+    margin: auto;
+    width: 70%;
+    padding-top: 3%;
+    text-align: left
+}
+
+    #items > li.item ul {
+        list-style: none;
+        position: absolute;
+        top: -1000em;
+        left: 0px;
+    }
+
+    #items li.item ul li a {
+        display: inline;
+    }
+
+    #items > li.item:hover ul {
+        top: 3em
+    }
+
+.item {
+    display: inline-block;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    padding-right: 5px;
+}
+
+.message {
+    width: 100%;
+    height: 20%;
+    background-color: salmon;
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+}
+.message-content {
+    width: 70%;
+    text-align: center;
+    display: inline-block;
+    margin:2%;
+}
+
+.footer {
+    background-color: black;
+    text-align: center;
+    vertical-align: middle;
+    padding-top:10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.footer a {
+    height: 20px;
+    width: 20px;
+}
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none
+    }
+}
+
+.product {
+    background-color: silver;
+    width: 100%;
+    height: 100%;
+    overflow-y: overlay;
+    display: inline-flex;
+}
+
+.leftProduct {
+    width: 50%;
+}
+
+    .leftProduct img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        padding-top: 3%
+    }
+
+.rightProduct {
+    width: 50%;
+}
